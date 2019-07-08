@@ -1,2 +1,2 @@
 const css = require('./test.module.css');
-console.log(css);
+console.log(css.wrapper);

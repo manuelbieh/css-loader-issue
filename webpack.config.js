@@ -1,3 +1,7 @@
+const path = require('path');
+const loaderUtils = require('loader-utils');
+const getCSSModuleLocalIdent = require('react-dev-utils/getCSSModuleLocalIdent');
+
 module.exports = {
     entry: './index.js',
     mode: 'production',
@@ -9,9 +13,7 @@ module.exports = {
                 options: {
                     localsConvention: 'camelCase',
                     modules: {
-                        getLocalIdent: () => {
-                            return Math.random().toString(36).substring(2)
-                        },
+                      getLocalIdent: getCSSModuleLocalIdent,
                     }
                 },
             }]
